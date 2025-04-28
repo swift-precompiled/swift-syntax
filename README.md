@@ -22,3 +22,11 @@ Showing All Issues
 These warnings are technically correct. We think there are two ways to solve this:
 1. Fork all your package dependencies and update `swiftlang/swift-syntax` to `swift-precompiled/swift-syntax`
 2. Create a local workspace and add a local clone of this repo to the workspace tree. 
+
+# Relevant 
+- https://forums.swift.org/t/compilation-extremely-slow-since-macros-adoption/67921/68
+- https://github.com/johnno1962/InstantSyntax
+- https://github.com/sjavora/swift-syntax-xcframeworks
+
+# Acknowledgements
+A part of @PreternaturalAI’s ongoing work. More coming soon.
