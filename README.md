@@ -1,9 +1,9 @@
-# swift-syntax
----
+# Usage
 
 1. Add `https://github.com/swift-precompiled/swift-syntax.git` with the branch set to `release/6.1`
+2. Profit.
 
-### Troubleshooting
+# Troubleshooting
 
 The general fix that works:
 1. **Product** → **Clean Build Folder**
