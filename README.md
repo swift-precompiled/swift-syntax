@@ -1,10 +1,10 @@
 <a id="readme-top"></a>
 
-swift-precompiled/swift-syntax
+Precompiled Swift Syntax
 ========================
 
 > [!NOTE]  
-> **Tested with Xcode 16.3**.
+> Tested with Xcode 16.3 against the `release/6.1` branch.
 
 A precompiled distribution of `swiftlang/swift-syntax` that allows you to completely eliminate having to build SwiftSyntax from source.
 
@@ -116,13 +116,13 @@ Further Reading
 Acknowledgements
 ----------------
 
-Led by [@vatsal_manot](https://github.com/vatsal_manot).
-
-**Special thanks** to  
-- [@johnno1962](https://github.com/johnno1962),  
-- [@yume190](https://github.com/yume190)  
+Special thanks to  
 - [@giginet](https://github.com/giginet)  
+- [@johnno1962](https://github.com/johnno1962),  
+- [@kabiroberai](https://github.com/kabiroberai)
+- [@yume190](https://github.com/yume190)
 
-A part of [@PreternaturalAI](https://github.com/PreternaturalAI)’s ongoing work.
+
+Led by [@vatsal_manot](https://github.com/vatsal_manot) as a part of [@PreternaturalAI](https://github.com/PreternaturalAI)’s ongoing work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
