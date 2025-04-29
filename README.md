@@ -53,10 +53,10 @@ in future versions of SwiftPM.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Why a pre-compiled `swift-syntax`?
+Why a precompiled `swift-syntax`?
 ----------------------------------
 
-Swift macros rely on **SwiftSyntax** to parse and expand your source. Pulling the full package and recompiling it *every* clean build for *every* architecture costs a lot of time:
+[Swift macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/) rely on **SwiftSyntax** to parse and expand your source. Pulling the full package and recompiling it *every* clean build for *every* architecture costs a lot of time:
 
 | Scenario | Extra build time |
 | -------- | ---------------- |
