@@ -123,6 +123,6 @@ Special thanks to
 - [@yume190](https://github.com/yume190)
 
 
-Led by [@vatsal_manot](https://github.com/vatsal_manot) as a part of [@PreternaturalAI](https://github.com/PreternaturalAI)’s ongoing work.
+Led by [@vatsal_manot](https://github.com/vmanot) as a part of [@PreternaturalAI](https://github.com/PreternaturalAI)’s ongoing work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
