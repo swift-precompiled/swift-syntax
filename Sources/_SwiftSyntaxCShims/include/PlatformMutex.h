@@ -10,24 +10,33 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef SWIFTSYNTAX_ERRNO_H
-#define SWIFTSYNTAX_ERRNO_H
+#ifndef SWIFTSYNTAX_PLATFORMMUTEX_H
+#define SWIFTSYNTAX_PLATFORMMUTEX_H
 
 #include "_bridging.h"
-
-#include <errno.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-SWIFT_NAME_S("getter:swift_syntax_errno()")
-static inline int swiftsyntax_errno(void) {
-  return errno;
-}
+typedef struct PlatformMutex {
+  void *opaque;
+} PlatformMutex;
+
+SWIFT_NAME_S("PlatformMutex.create()")
+PlatformMutex swiftsyntax_platform_mutex_create(void);
+
+SWIFT_NAME_S("PlatformMutex.lock(self:)")
+void swiftsyntax_platform_mutex_lock(PlatformMutex m);
+
+SWIFT_NAME_S("PlatformMutex.unlock(self:)")
+void swiftsyntax_platform_mutex_unlock(PlatformMutex m);
+
+SWIFT_NAME_S("PlatformMutex.destroy(self:)")
+void swiftsyntax_platform_mutex_destroy(PlatformMutex m);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // SWIFTSYNTAX_ERRNO_H
+#endif // SWIFTSYNTAX_PLATFORMMUTEX_H
