@@ -10,24 +10,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef SWIFTSYNTAX_ERRNO_H
-#define SWIFTSYNTAX_ERRNO_H
+#ifndef SWIFTSYNTAX_BRIDGING_H
+#define SWIFTSYNTAX_BRIDGING_H
 
-#include "_bridging.h"
-
-#include <errno.h>
-
-#ifdef __cplusplus
-extern "C" {
+#if __has_attribute(swift_name)
+#define SWIFT_NAME_S(NAME) __attribute__((swift_name(NAME)))
+#else
+#define SWIFT_NAME_S(NAME)
 #endif
 
-SWIFT_NAME_S("getter:swift_syntax_errno()")
-static inline int swiftsyntax_errno(void) {
-  return errno;
-}
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif // SWIFTSYNTAX_ERRNO_H
+#endif // SWIFTSYNTAX_BRIDGING_H
