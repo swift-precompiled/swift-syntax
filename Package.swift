@@ -93,7 +93,8 @@ let package = Package(
     targets: [
         .target(
             name: "_SwiftSyntaxCShims_Aggregation",
-            dependencies: ["_SwiftSyntaxCShims"]
+            dependencies: ["_SwiftSyntaxCShims"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "_SwiftSyntaxCShims",
@@ -102,21 +103,23 @@ let package = Package(
         ),
         .target(
             name: "_SwiftSyntaxGenericTestSupport_Aggregation",
-            dependencies: ["_SwiftSyntaxGenericTestSupport"]
+            dependencies: ["_SwiftSyntaxGenericTestSupport"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "_SwiftSyntaxGenericTestSupport",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/_SwiftSyntaxGenericTestSupport-e3ff1c5c6fb1f0f9939397c048bba8a6a5e7c934b60d606d164b90b0ff1f4253.xcframework.zip",
-            checksum: "e3ff1c5c6fb1f0f9939397c048bba8a6a5e7c934b60d606d164b90b0ff1f4253"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/_SwiftSyntaxGenericTestSupport-58b90dc83d0168c36aff626697cc7d7b0d708f27971f4a0fef562d10e961ab8b.xcframework.zip",
+            checksum: "58b90dc83d0168c36aff626697cc7d7b0d708f27971f4a0fef562d10e961ab8b"
         ),
         .target(
             name: "SwiftBasicFormat_Aggregation",
-            dependencies: ["SwiftBasicFormat", "SwiftSyntax_Aggregation"]
+            dependencies: ["SwiftBasicFormat", "SwiftSyntax_Aggregation"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftBasicFormat",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftBasicFormat-4439ebfe42787530ae37c01822cceb810f968f596131a5868351e1ca460fd18f.xcframework.zip",
-            checksum: "4439ebfe42787530ae37c01822cceb810f968f596131a5868351e1ca460fd18f"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftBasicFormat-de55c51fa1f3c881da4c9d34df1deb175268af2f28df32b5474b211e09feed68.xcframework.zip",
+            checksum: "de55c51fa1f3c881da4c9d34df1deb175268af2f28df32b5474b211e09feed68"
         ),
         .target(
             name: "SwiftCompilerPlugin_Aggregation",
@@ -124,12 +127,13 @@ let package = Package(
                 "SwiftCompilerPlugin",
                 "SwiftCompilerPluginMessageHandling_Aggregation",
                 "SwiftSyntaxMacros_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftCompilerPlugin",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftCompilerPlugin-cbe5458c4bfd60f9e3c2d96a3c4922e2471d1284fc38c703cf87d2544ffdf8ed.xcframework.zip",
-            checksum: "cbe5458c4bfd60f9e3c2d96a3c4922e2471d1284fc38c703cf87d2544ffdf8ed"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftCompilerPlugin-60cb6da90ca73decede14570d7a8cc7fa07814aed5baf28ba06fda30f36e1e97.xcframework.zip",
+            checksum: "60cb6da90ca73decede14570d7a8cc7fa07814aed5baf28ba06fda30f36e1e97"
         ),
         .target(
             name: "SwiftCompilerPluginMessageHandling_Aggregation",
@@ -142,21 +146,23 @@ let package = Package(
                 "SwiftSyntax_Aggregation",
                 "SwiftSyntaxMacros_Aggregation",
                 "SwiftSyntaxMacroExpansion_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftCompilerPluginMessageHandling",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftCompilerPluginMessageHandling-749f6b30faad25de371c615f0c54e7fa6a3c6c877e823e4d7a65cb1eddebe8f2.xcframework.zip",
-            checksum: "749f6b30faad25de371c615f0c54e7fa6a3c6c877e823e4d7a65cb1eddebe8f2"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftCompilerPluginMessageHandling-c4295c543a33a3ab79fb363b9e1346eeeed61b46f65c07cc9863d4f28477232a.xcframework.zip",
+            checksum: "c4295c543a33a3ab79fb363b9e1346eeeed61b46f65c07cc9863d4f28477232a"
         ),
         .target(
             name: "SwiftDiagnostics_Aggregation",
-            dependencies: ["SwiftDiagnostics", "SwiftSyntax_Aggregation"]
+            dependencies: ["SwiftDiagnostics", "SwiftSyntax_Aggregation"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftDiagnostics",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftDiagnostics-006e444b7ad3cc256a02f62d18eb6f3fafa2638d1dd156f33c2fbd6cc62df2ff.xcframework.zip",
-            checksum: "006e444b7ad3cc256a02f62d18eb6f3fafa2638d1dd156f33c2fbd6cc62df2ff"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftDiagnostics-cfd3ef60d44d8de96e5ff61b9048a989e3e9760c9ebf605b6868a7d8ae789973.xcframework.zip",
+            checksum: "cfd3ef60d44d8de96e5ff61b9048a989e3e9760c9ebf605b6868a7d8ae789973"
         ),
         .target(
             name: "SwiftIDEUtils_Aggregation",
@@ -165,12 +171,13 @@ let package = Package(
                 "SwiftSyntax_Aggregation",
                 "SwiftDiagnostics_Aggregation",
                 "SwiftParser_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftIDEUtils",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftIDEUtils-25b68a5b3a0fa1b3b55b49cac36dabcedc1bc31342965e9b4d80d5d9fb56f783.xcframework.zip",
-            checksum: "25b68a5b3a0fa1b3b55b49cac36dabcedc1bc31342965e9b4d80d5d9fb56f783"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftIDEUtils-da94396cd927fde0ae2c827294b6b1e09bed9d2c2bef816a94b63ba5163b3feb.xcframework.zip",
+            checksum: "da94396cd927fde0ae2c827294b6b1e09bed9d2c2bef816a94b63ba5163b3feb"
         ),
         .target(
             name: "SwiftIfConfig_Aggregation",
@@ -181,12 +188,13 @@ let package = Package(
                 "SwiftDiagnostics_Aggregation",
                 "SwiftOperators_Aggregation",
                 "SwiftParser_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftIfConfig",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftIfConfig-9a3ce4aad9a3783bb69bc19ed45b71873d1bd54c869274a43c443dfd3f6b8ab9.xcframework.zip",
-            checksum: "9a3ce4aad9a3783bb69bc19ed45b71873d1bd54c869274a43c443dfd3f6b8ab9"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftIfConfig-16a3c6e7a6ddfe4242d7f41a849c68b1ad7fc0073a59e654969e2fbfd7c5b854.xcframework.zip",
+            checksum: "16a3c6e7a6ddfe4242d7f41a849c68b1ad7fc0073a59e654969e2fbfd7c5b854"
         ),
         .target(
             name: "SwiftWarningControl_Aggregation",
@@ -195,12 +203,13 @@ let package = Package(
                 "SwiftSyntax_Aggregation",
                 "SwiftParser_Aggregation",
                 "SwiftDiagnostics_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftWarningControl",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftWarningControl-6dceb5013d6b33b6277a5ba7994b4df04ccb514682387fe4d942703e16787d51.xcframework.zip",
-            checksum: "6dceb5013d6b33b6277a5ba7994b4df04ccb514682387fe4d942703e16787d51"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftWarningControl-ffacf104cbcc9941b0e2497a605b01aa2ca891067142b3e237635764d2eda529.xcframework.zip",
+            checksum: "ffacf104cbcc9941b0e2497a605b01aa2ca891067142b3e237635764d2eda529"
         ),
         .target(
             name: "SwiftLexicalLookup_Aggregation",
@@ -208,12 +217,13 @@ let package = Package(
                 "SwiftLexicalLookup",
                 "SwiftSyntax_Aggregation",
                 "SwiftIfConfig_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftLexicalLookup",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftLexicalLookup-03f1fbf32f5b255afb67343ce3841b5807803c9b4e69d3e212d8e150956c1376.xcframework.zip",
-            checksum: "03f1fbf32f5b255afb67343ce3841b5807803c9b4e69d3e212d8e150956c1376"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftLexicalLookup-445392bc260729d2acc3271b424fb90d6a66b23e9d2fde1b3209bf380a69053d.xcframework.zip",
+            checksum: "445392bc260729d2acc3271b424fb90d6a66b23e9d2fde1b3209bf380a69053d"
         ),
         .target(
             name: "SwiftLibraryPluginProvider_Aggregation",
@@ -222,21 +232,23 @@ let package = Package(
                 "SwiftSyntaxMacros_Aggregation",
                 "SwiftCompilerPluginMessageHandling_Aggregation",
                 "_SwiftLibraryPluginProviderCShims_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftLibraryPluginProvider",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftLibraryPluginProvider-099fe0f7dbe9b110d8dd30c25c296f08b0b2808380bc2bf50d5d8b8ef0339280.xcframework.zip",
-            checksum: "099fe0f7dbe9b110d8dd30c25c296f08b0b2808380bc2bf50d5d8b8ef0339280"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftLibraryPluginProvider-a84cf074f63f877d813c83072763267141c37121361d72f6d8a6c248ee871fac.xcframework.zip",
+            checksum: "a84cf074f63f877d813c83072763267141c37121361d72f6d8a6c248ee871fac"
         ),
         .target(
             name: "_SwiftLibraryPluginProviderCShims_Aggregation",
-            dependencies: ["_SwiftLibraryPluginProviderCShims"]
+            dependencies: ["_SwiftLibraryPluginProviderCShims"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "_SwiftLibraryPluginProviderCShims",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/_SwiftLibraryPluginProviderCShims-894ce257d15b66d34d960fb0b33f48d85c6bcc14eef3ecb21706b98099367e18.xcframework.zip",
-            checksum: "894ce257d15b66d34d960fb0b33f48d85c6bcc14eef3ecb21706b98099367e18"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/_SwiftLibraryPluginProviderCShims-8329d0773fd5f65550d05e3ccce79f191fe5344c441eb5f30f9f4d2057c03217.xcframework.zip",
+            checksum: "8329d0773fd5f65550d05e3ccce79f191fe5344c441eb5f30f9f4d2057c03217"
         ),
         .target(
             name: "SwiftSyntax_Aggregation",
@@ -249,16 +261,18 @@ let package = Package(
                 "SwiftSyntax601_Aggregation",
                 "SwiftSyntax602_Aggregation",
                 "SwiftSyntax603_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax-fb15240c03828160e6f65bc1420f4bd1460d04abdff19d0296435c964f9a40e9.xcframework.zip",
-            checksum: "fb15240c03828160e6f65bc1420f4bd1460d04abdff19d0296435c964f9a40e9"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax-ee2173b1706301537e93fdd08629fdbcc881f51e77249e06a86eb4171f47e447.xcframework.zip",
+            checksum: "ee2173b1706301537e93fdd08629fdbcc881f51e77249e06a86eb4171f47e447"
         ),
         .target(
             name: "SwiftSyntax509_Aggregation",
-            dependencies: ["SwiftSyntax509"]
+            dependencies: ["SwiftSyntax509"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax509",
@@ -267,16 +281,18 @@ let package = Package(
         ),
         .target(
             name: "SwiftSyntax510_Aggregation",
-            dependencies: ["SwiftSyntax510"]
+            dependencies: ["SwiftSyntax510"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax510",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax510-d638c6a0651ac92c0e4a216e46f0c91ee7db98b413a75d9bee9b2c2e2d69d365.xcframework.zip",
-            checksum: "d638c6a0651ac92c0e4a216e46f0c91ee7db98b413a75d9bee9b2c2e2d69d365"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax510-cef54cd38861b1141199d8e06b2376d4d73afd93de668f5451b7330d51177c78.xcframework.zip",
+            checksum: "cef54cd38861b1141199d8e06b2376d4d73afd93de668f5451b7330d51177c78"
         ),
         .target(
             name: "SwiftSyntax600_Aggregation",
-            dependencies: ["SwiftSyntax600"]
+            dependencies: ["SwiftSyntax600"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax600",
@@ -285,25 +301,28 @@ let package = Package(
         ),
         .target(
             name: "SwiftSyntax601_Aggregation",
-            dependencies: ["SwiftSyntax601"]
+            dependencies: ["SwiftSyntax601"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax601",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax601-001ceec41d906e74bf8cc220a083dd27ab465666667af206a2e9af3742036cbd.xcframework.zip",
-            checksum: "001ceec41d906e74bf8cc220a083dd27ab465666667af206a2e9af3742036cbd"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax601-e9cca5be091fb98c4ba07a5999f64a2c6c49353dad41de0a31c5557091c14b2a.xcframework.zip",
+            checksum: "e9cca5be091fb98c4ba07a5999f64a2c6c49353dad41de0a31c5557091c14b2a"
         ),
         .target(
             name: "SwiftSyntax602_Aggregation",
-            dependencies: ["SwiftSyntax602"]
+            dependencies: ["SwiftSyntax602"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax602",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax602-e062de312be910ce6e92fa14ac31021dee1fa1b58ce75f23f23bc3188c7c3a05.xcframework.zip",
-            checksum: "e062de312be910ce6e92fa14ac31021dee1fa1b58ce75f23f23bc3188c7c3a05"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntax602-671c8ce4258b51c0ff7444289199fef0cbace9e09027797ff84b8d35c7bb01c4.xcframework.zip",
+            checksum: "671c8ce4258b51c0ff7444289199fef0cbace9e09027797ff84b8d35c7bb01c4"
         ),
         .target(
             name: "SwiftSyntax603_Aggregation",
-            dependencies: ["SwiftSyntax603"]
+            dependencies: ["SwiftSyntax603"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntax603",
@@ -319,12 +338,13 @@ let package = Package(
                 "SwiftDiagnostics_Aggregation",
                 "SwiftParserDiagnostics_Aggregation",
                 "SwiftSyntax_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntaxBuilder",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxBuilder-3226694c728a65aceaaec2ac4f2017550cafdee5c0e7e3d0c7f3e9d01e62b31b.xcframework.zip",
-            checksum: "3226694c728a65aceaaec2ac4f2017550cafdee5c0e7e3d0c7f3e9d01e62b31b"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxBuilder-06d9a5bd244248962302c6c59ee6d751d40a2ef5bf167abad93e4030ba4c55ad.xcframework.zip",
+            checksum: "06d9a5bd244248962302c6c59ee6d751d40a2ef5bf167abad93e4030ba4c55ad"
         ),
         .target(
             name: "SwiftSyntaxMacros_Aggregation",
@@ -335,12 +355,13 @@ let package = Package(
                 "SwiftParser_Aggregation",
                 "SwiftSyntax_Aggregation",
                 "SwiftSyntaxBuilder_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntaxMacros",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacros-7b8d97a22053113043b4c3a1fabf7e1fabfb60ebc124df34365e5d83bf57b81c.xcframework.zip",
-            checksum: "7b8d97a22053113043b4c3a1fabf7e1fabfb60ebc124df34365e5d83bf57b81c"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacros-7fa29e8bd08afd320dcd8fa710145ee4e10a5daae81edd0e33cc638ce2e9b2df.xcframework.zip",
+            checksum: "7fa29e8bd08afd320dcd8fa710145ee4e10a5daae81edd0e33cc638ce2e9b2df"
         ),
         .target(
             name: "SwiftSyntaxMacroExpansion_Aggregation",
@@ -351,12 +372,13 @@ let package = Package(
                 "SwiftSyntaxMacros_Aggregation",
                 "SwiftDiagnostics_Aggregation",
                 "SwiftOperators_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntaxMacroExpansion",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacroExpansion-c5bb9eda167bfe4389f27c9744df745a9e00e0234d00aefcf15ef8b177655ec4.xcframework.zip",
-            checksum: "c5bb9eda167bfe4389f27c9744df745a9e00e0234d00aefcf15ef8b177655ec4"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacroExpansion-66016fc3b18d63bed94d310c0cc6ac964e83c6563fd2692a3e63683910eea264.xcframework.zip",
+            checksum: "66016fc3b18d63bed94d310c0cc6ac964e83c6563fd2692a3e63683910eea264"
         ),
         .target(
             name: "SwiftSyntaxMacrosTestSupport_Aggregation",
@@ -366,12 +388,13 @@ let package = Package(
                 "SwiftSyntaxMacroExpansion_Aggregation",
                 "SwiftSyntaxMacros_Aggregation",
                 "SwiftSyntaxMacrosGenericTestSupport_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntaxMacrosTestSupport",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacrosTestSupport-b5c8316c8862d04784564e0bf4e5ecb99964d9c6f3c5dcc99b2ee8e9f46c7bbf.xcframework.zip",
-            checksum: "b5c8316c8862d04784564e0bf4e5ecb99964d9c6f3c5dcc99b2ee8e9f46c7bbf"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacrosTestSupport-cf87c12f075799847dcd7ed45faf197f865e4d5d35c6bffab032128c8775451e.xcframework.zip",
+            checksum: "cf87c12f075799847dcd7ed45faf197f865e4d5d35c6bffab032128c8775451e"
         ),
         .target(
             name: "SwiftSyntaxMacrosGenericTestSupport_Aggregation",
@@ -384,21 +407,23 @@ let package = Package(
                 "SwiftParser_Aggregation",
                 "SwiftSyntaxMacros_Aggregation",
                 "SwiftSyntaxMacroExpansion_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftSyntaxMacrosGenericTestSupport",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacrosGenericTestSupport-33669a14ca2fb38c968caec64e341d9b897a108c9a2ad93ab572e3a07cf2e8e0.xcframework.zip",
-            checksum: "33669a14ca2fb38c968caec64e341d9b897a108c9a2ad93ab572e3a07cf2e8e0"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftSyntaxMacrosGenericTestSupport-507af4862f4f03f8719b35aae2374eaf4f62e0122158d6155819d4ecb0cfa5f4.xcframework.zip",
+            checksum: "507af4862f4f03f8719b35aae2374eaf4f62e0122158d6155819d4ecb0cfa5f4"
         ),
         .target(
             name: "SwiftParser_Aggregation",
-            dependencies: ["SwiftParser", "SwiftSyntax_Aggregation"]
+            dependencies: ["SwiftParser", "SwiftSyntax_Aggregation"],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftParser",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftParser-444fccbd469ca6891c5ca6a851ac77d1a5cd20c3919a1b67ad73dc27a288b746.xcframework.zip",
-            checksum: "444fccbd469ca6891c5ca6a851ac77d1a5cd20c3919a1b67ad73dc27a288b746"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftParser-b057ffe102245bc4c088b10c47dc0b2ac03043c40dac1045b558ab37716d2a7f.xcframework.zip",
+            checksum: "b057ffe102245bc4c088b10c47dc0b2ac03043c40dac1045b558ab37716d2a7f"
         ),
         .target(
             name: "SwiftParserDiagnostics_Aggregation",
@@ -408,12 +433,13 @@ let package = Package(
                 "SwiftDiagnostics_Aggregation",
                 "SwiftParser_Aggregation",
                 "SwiftSyntax_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftParserDiagnostics",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftParserDiagnostics-39a828d45e8f1996de9f7f64cbffe7ee3570a7650ef0ab2329d944b29bfc3fcb.xcframework.zip",
-            checksum: "39a828d45e8f1996de9f7f64cbffe7ee3570a7650ef0ab2329d944b29bfc3fcb"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftParserDiagnostics-f00749a17e4b5825fd26d0ddc52323957c0a46d529dd7fb45696ef4c158d33c1.xcframework.zip",
+            checksum: "f00749a17e4b5825fd26d0ddc52323957c0a46d529dd7fb45696ef4c158d33c1"
         ),
         .target(
             name: "SwiftOperators_Aggregation",
@@ -422,12 +448,13 @@ let package = Package(
                 "SwiftDiagnostics_Aggregation",
                 "SwiftParser_Aggregation",
                 "SwiftSyntax_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftOperators",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftOperators-2bbbae412fad5bba5f01bb7044dc9ceeaca466827a43074460ec3d0975618f0a.xcframework.zip",
-            checksum: "2bbbae412fad5bba5f01bb7044dc9ceeaca466827a43074460ec3d0975618f0a"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftOperators-9f8996131d1f562058c8c27a55ed59d95af4fe8c9a178841eef211dda3ce46a6.xcframework.zip",
+            checksum: "9f8996131d1f562058c8c27a55ed59d95af4fe8c9a178841eef211dda3ce46a6"
         ),
         .target(
             name: "SwiftRefactor_Aggregation",
@@ -437,12 +464,13 @@ let package = Package(
                 "SwiftParser_Aggregation",
                 "SwiftSyntax_Aggregation",
                 "SwiftSyntaxBuilder_Aggregation"
-            ]
+            ],
+            swiftSettings: [.define("SCIPIO_PRECOMPILED_BINARY_WRAPPER")]
         ),
         .binaryTarget(
             name: "SwiftRefactor",
-            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftRefactor-dd2e804adfcd57bf0c3102a4cc9ce8d25201ff388400af111efd084d5b2339cf.xcframework.zip",
-            checksum: "dd2e804adfcd57bf0c3102a4cc9ce8d25201ff388400af111efd084d5b2339cf"
+            url: "https://github.com/swift-precompiled/swift-syntax/releases/download/603.0.2/SwiftRefactor-1999faa44a76d08ec545f1a401638b2c1a27c3c11d8b9a230b14d81e389625a9.xcframework.zip",
+            checksum: "1999faa44a76d08ec545f1a401638b2c1a27c3c11d8b9a230b14d81e389625a9"
         )
     ]
 )
